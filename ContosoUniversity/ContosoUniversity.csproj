@@ -154,6 +154,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\CoursesController.cs" />
+    <Compile Include="Controllers\DepartmentsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InstructorController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
@@ -182,6 +183,10 @@
     <Compile Include="Migrations\201704220258059_ComplexDataModel.cs" />
     <Compile Include="Migrations\201704220258059_ComplexDataModel.Designer.cs">
       <DependentUpon>201704220258059_ComplexDataModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705160707177_DepartmentSP.cs" />
+    <Compile Include="Migrations\201705160707177_DepartmentSP.Designer.cs">
+      <DependentUpon>201705160707177_DepartmentSP.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Course.cs" />
@@ -248,6 +253,11 @@
     <Content Include="Views\Instructor\Details.cshtml" />
     <Content Include="Views\Instructor\Edit.cshtml" />
     <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Departments\Create.cshtml" />
+    <Content Include="Views\Departments\Delete.cshtml" />
+    <Content Include="Views\Departments\Details.cshtml" />
+    <Content Include="Views\Departments\Edit.cshtml" />
+    <Content Include="Views\Departments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -282,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704220258059_ComplexDataModel.resx">
       <DependentUpon>201704220258059_ComplexDataModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705160707177_DepartmentSP.resx">
+      <DependentUpon>201705160707177_DepartmentSP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

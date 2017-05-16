@@ -62,7 +62,7 @@ namespace ContosoUniversity.Logging
         }
         public void TraceApi(string componentName, string method, TimeSpan timespan, string properties)
         {
-            string message = String.Concat("Component:", componentName, ";Method:", method, ";Timespan:", timespan.ToString(), ";Properties:", properties);
+            string message = String.Concat("组件Component:", componentName, ";方法Method:", method, ";时间戳Timespan:", timespan.ToString(), ";属性Properties:", properties);
             Trace.TraceInformation(message);
         }
 
