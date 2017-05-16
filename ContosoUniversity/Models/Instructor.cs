@@ -9,6 +9,8 @@ namespace ContosoUniversity.Models
 {
     public class Instructor
     {
+        private ICollection<Course> _courses;
+
         public int ID { get; set; }
 
         [Display(Name = "Last Name"), StringLength(50, MinimumLength = 1)]
@@ -26,7 +28,18 @@ namespace ContosoUniversity.Models
             get { return LastName + ", " + FirstMidName; }
         }
 
-        public virtual ICollection<Course> Courses { get; set; }
+        //public virtual ICollection<Course> Courses { get; set; }
+        public virtual ICollection<Course> Courses
+        {
+            get
+            {
+                return _courses ?? (_courses = new List<Course>());
+            }
+            set
+            {
+                _courses = value;
+            }
+        }
         public virtual OfficeAssignment OfficeAssignment { get; set; }
     }
 }
